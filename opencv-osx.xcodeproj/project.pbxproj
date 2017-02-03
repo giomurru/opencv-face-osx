@@ -29,6 +29,7 @@
 		9DEC26AF1E41D6FF007B3D60 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9DEC26AE1E41D6FF007B3D60 /* ViewController.mm */; };
 		9DEC26B11E41D6FF007B3D60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DEC26B01E41D6FF007B3D60 /* Assets.xcassets */; };
 		9DEC26B41E41D6FF007B3D60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DEC26B21E41D6FF007B3D60 /* Main.storyboard */; };
+		9DFB33141E44EAC00090F3B7 /* FaceDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DFB33121E44EAC00090F3B7 /* FaceDetector.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,8 @@
 		9DEC26B01E41D6FF007B3D60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DEC26B31E41D6FF007B3D60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9DEC26B51E41D6FF007B3D60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DFB33121E44EAC00090F3B7 /* FaceDetector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FaceDetector.cpp; sourceTree = "<group>"; };
+		9DFB33131E44EAC00090F3B7 /* FaceDetector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FaceDetector.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,7 @@
 		9DEC269B1E41D6FF007B3D60 = {
 			isa = PBXGroup;
 			children = (
+				9DFB33111E44EAC00090F3B7 /* opencv-face-framework */,
 				9DEC26A61E41D6FF007B3D60 /* opencv-osx */,
 				9DEC26A51E41D6FF007B3D60 /* Products */,
 			);
@@ -133,6 +137,15 @@
 				9DEC26AB1E41D6FF007B3D60 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9DFB33111E44EAC00090F3B7 /* opencv-face-framework */ = {
+			isa = PBXGroup;
+			children = (
+				9DFB33121E44EAC00090F3B7 /* FaceDetector.cpp */,
+				9DFB33131E44EAC00090F3B7 /* FaceDetector.hpp */,
+			);
+			path = "opencv-face-framework";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +238,7 @@
 			files = (
 				9DEC26AF1E41D6FF007B3D60 /* ViewController.mm in Sources */,
 				9DEC26AC1E41D6FF007B3D60 /* main.m in Sources */,
+				9DFB33141E44EAC00090F3B7 /* FaceDetector.cpp in Sources */,
 				9DEC26A91E41D6FF007B3D60 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

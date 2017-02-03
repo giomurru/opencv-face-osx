@@ -18,7 +18,7 @@ using namespace std;
 
 @implementation ViewController
 {
-    CascadeClassifier _cascade;
+    std::shared_ptr<CascadeClassifier> m_cascade;
 }
 
 - (void)viewDidAppear {
@@ -27,7 +27,9 @@ using namespace std;
     NSString *xmlPath = [[NSBundle mainBundle ] pathForResource:@"haarcascade_frontalface_default"
                                                          ofType: @"xml"];
     NSLog(@"%@", xmlPath);
-    _cascade.load([xmlPath cStringUsingEncoding:NSUTF8StringEncoding]);
+    std::string xml_path = [xmlPath cStringUsingEncoding:NSUTF8StringEncoding];
+    m_cascade = make_shared<CascadeClassifier>();
+    m_cascade->load(xml_path.c_str());
     
     // Do any additional setup after loading the view.
     [self executeVideoCapture];
@@ -86,7 +88,7 @@ using namespace std;
     {
         cvtColor(image, gray_image, CV_BGR2GRAY );
     }
-    _cascade.detectMultiScale( gray_image, faces, 1.3, 7, flags, minFeatureSize);
+    m_cascade->detectMultiScale( gray_image, faces, 1.3, 7, flags, minFeatureSize);
     gray_image.release();
     //    faces   = cvHaarDetectObjects( &tmp_image, _cascade, storage, ( float )1.2, 2, CV_HAAR_DO_CANNY_PRUNING, cvSize( 20, 20 ) );
     
