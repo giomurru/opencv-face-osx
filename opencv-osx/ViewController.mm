@@ -7,12 +7,6 @@
 //
 
 #import "ViewController.h"
-#import <opencv2/opencv.hpp>
-#import <opencv2/video.hpp>
-#import <opencv2/objdetect.hpp>
-#include <opencv2/video/tracking.hpp>
-#include <opencv2/highgui/highgui.hpp>
-
 #include "FaceDetector.hpp"
 
 using namespace gm;
